@@ -8,10 +8,13 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var hike = require('./routes/hike');
+var upload = require('./routes/upload');
 
 var app = express();
 app.get('/hikes', hike.index);
 app.post('/add_hike', hike.add_hike);
+app.get('/upload', upload.index);
+app.post('/add_upload', upload.add_upload);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
