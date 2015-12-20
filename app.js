@@ -11,9 +11,7 @@ var hike = require('./routes/hike');
 var upload = require('./routes/upload');
 
 var app = express();
-app.get('/hikes', hike.index);
-app.post('/add_hike', hike.add_hike);
-app.get('/upload', upload.index);
+app.get('/uploads', upload.index);
 app.post('/add_upload', upload.add_upload);
 
 // view engine setup
